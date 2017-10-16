@@ -24,7 +24,7 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </button>
-                <a class="navbar-brand" href="#">PGS Software</a>
+                <a class="navbar-brand" href="#">X</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,16 +49,31 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div id="menu1" class="tab-pane fade">
-                    <h3>Menu 1</h3>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="row">
+                        <div class="col-sm-5 leftBox" style="background-color:lavender;">
+                        </div>
+                        <div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-4</div>
+                        <div class="col-sm-5" style="background-color:lavender;"></div>
+                    </div>
+
+
                 </div>
                 <div id="menu2" class="tab-pane fade">
-                    <h3>Menu 2</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                </div>
-                <div id="menu3" class="tab-pane fade">
-                    <h3>Menu 3</h3>
-                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+                    <div class="myForm">
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-input" placeholder="Email" required>
+                            </div>
+                            <div class="form-group message">
+                                <input type="text" class="form-input" placeholder="Message">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -69,13 +84,30 @@
     <footer class="footer">
         <div class="container">
             <hr>
-            <p>Powered by Marek Słowik</p>
+            <p>Powered by PGS</p>
         </div>
     </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        $.getJSON('getData.php', function(data) {
+            console.log(data.body);
+            var camA1 = data.body[14].cams[57].url;
+            var camA2 = data.body[14].cams[57].url;
+            var camB1 = data.body[14].cams[57].url;
+            var camB2 = data.body[14].cams[57].url;
+
+            $(".leftBox").append("<img src=" + camA1 + " alt='cam A1' >");
+            $(".leftBox").append("<img src=" + camA2 + " alt='cam A2' >");
+            $(".rightBox").append("<img src=" + camB1 + " alt='cam B1' >");
+            $(".rightBox").append("<img src=" + camB2 + " alt='cam B2' >");
+
+
+        });
+
+    </script>
 
 </body>
 

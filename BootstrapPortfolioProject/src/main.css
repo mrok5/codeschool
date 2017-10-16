@@ -2,6 +2,49 @@
     font-family: robotoregular;
 }
 
+.form-input {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    box-shadow: none;
+    border-color: #ccc;
+    border-width: 0 0 2px 0;
+}
+
+button {
+    float: right;
+}
+
+.myForm {
+    margin: auto;
+    width: 50%;
+    border-style: solid;
+    height: 400px;
+}
+
+.leftBox {
+    background-color: red;
+}
+
+.rightBox {
+    background-color: red;
+}
+
+.leftBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.rightBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.message {
+    margin-top: 100px;
+}
+
 /* NAVBAR
 -------------------------------------------------- */
 
