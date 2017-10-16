@@ -41,44 +41,42 @@
     </nav>
 
 
-    <div class="marketing">
-        <div class="container">
-            <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
-                    <h3>HOME</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="container">
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h3>HOME</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <div class="row">
+                    <div class="col-sm-5 leftBox">
+                    </div>
+                    <div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-4</div>
+                    <div class="col-sm-5 rightBox"></div>
                 </div>
-                <div id="menu1" class="tab-pane fade">
-                    <div class="row">
-                        <div class="col-sm-5 leftBox" style="background-color:lavender;">
+
+
+            </div>
+            <div id="menu2" class="tab-pane fade">
+
+                <div class="myForm">
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Name" required>
                         </div>
-                        <div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-4</div>
-                        <div class="col-sm-5" style="background-color:lavender;"></div>
-                    </div>
-
-
-                </div>
-                <div id="menu2" class="tab-pane fade">
-
-                    <div class="myForm">
-                        <form action="#">
-                            <div class="form-group">
-                                <input type="text" class="form-input" placeholder="Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-input" placeholder="Email" required>
-                            </div>
-                            <div class="form-group message">
-                                <input type="text" class="form-input" placeholder="Message">
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
-                    </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Email" required>
+                        </div>
+                        <div class="form-group message">
+                            <input type="text" class="form-input" placeholder="Message">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
                 </div>
             </div>
-
-
         </div>
+
+
     </div>
 
     <footer class="footer">
@@ -92,19 +90,28 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
-        $.getJSON('getData.php', function(data) {
-            console.log(data.body);
-            var camA1 = data.body[14].cams[57].url;
-            var camA2 = data.body[14].cams[57].url;
-            var camB1 = data.body[14].cams[57].url;
-            var camB2 = data.body[14].cams[57].url;
+        $.ajax({
+            url: 'getData.php',
+            dataType: 'json',
+            success: function(data) {
+                console.log(data.body);
+                var camA1 = data.body[14].cams[57].url;
+                var camA2 = data.body[14].cams[57].url;
+                var camB1 = data.body[14].cams[57].url;
+                var camB2 = data.body[14].cams[57].url;
 
-            $(".leftBox").append("<img src=" + camA1 + " alt='cam A1' >");
-            $(".leftBox").append("<img src=" + camA2 + " alt='cam A2' >");
-            $(".rightBox").append("<img src=" + camB1 + " alt='cam B1' >");
-            $(".rightBox").append("<img src=" + camB2 + " alt='cam B2' >");
-
-
+                $(".leftBox").append("<img src=" + camA1 + " alt='cam A1' >");
+                $(".leftBox").append("<img src=" + camA2 + " alt='cam A2' >");
+                $(".rightBox").append("<img src=" + camB1 + " alt='cam B1' >");
+                $(".rightBox").append("<img src=" + camB2 + " alt='cam B2' >");
+            },
+            error: function(data) {
+                console.log("Error");
+                $(".leftBox").append("<img src='cross.png' alt='cam A1' >");
+                $(".leftBox").append("<img src='cross.png' alt='cam A2' >");
+                $(".rightBox").append("<img src='cross.png' alt = 'cam B1' > ");
+                $(".rightBox ").append("<img src='cross.png' alt='cam B2' >");
+            }
         });
 
     </script>
