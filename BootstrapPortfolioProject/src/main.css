@@ -23,17 +23,18 @@ button {
     height: 400px;
 }
 
-.leftBox {
-    background-color: red;
-}
+.leftBox {}
 
-.rightBox {
-    background-color: red;
-}
+.rightBox {}
 
 .leftBox img {
     width: 100%;
     height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 150px;
 }
 
 .rightBox img {
@@ -45,11 +46,26 @@ button {
     margin-top: 100px;
 }
 
+
+.box {
+    background-color: white;
+    height: 280px;
+}
+
+.box p {
+    margin-left: 10%;
+}
+
+.box h3 {
+    margin-left: 10%;
+}
+
+
 /* NAVBAR
 -------------------------------------------------- */
 
 .navbar {
-    margin-bottom: 0;
+    margin-bottom: 50px;
 }
 
 /* CUSTOMIZED CAROUSEL
@@ -139,6 +155,7 @@ footer {
     color: white;
     text-shadow: 1px 1px 1px black;
     padding: 40px 0;
+    text-align: center;
 }
 
 /* RESPONSIVE CSS
