@@ -6,8 +6,17 @@
     margin: auto;
 }
 
+hr {
+    color: #373737;
+}
+
+#menuButton {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 .title {
-    background: green;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -17,15 +26,14 @@
 }
 
 .date {
-    background-color: azure;
     float: right;
 }
 
 .titleBox {
     height: 60px;
     width: auto;
-    background-color: darkmagenta;
-    position: relative
+    position: relative;
+    background-color: white;
 }
 
 .form-input {
@@ -35,7 +43,7 @@
     padding: 0.5rem 1rem;
     box-shadow: none;
     border-color: #ccc;
-    border-width: 0 0 2px 0;
+    border-width: 0 0 1px 0;
     margin-left: 30%;
 }
 
@@ -59,9 +67,7 @@
 
 .formElement {}
 
-.leftBox {
-    background-color: red;
-}
+.leftBox {}
 
 .rightBox {}
 
@@ -88,6 +94,9 @@ img {
 .box {
     background-color: white;
     height: 280px;
+    box-shadow: none;
+    border-color: black;
+    border-width: 0 0 2px 0;
 }
 
 .box p {
@@ -170,9 +179,9 @@ footer {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 160px;
-    background: #444;
-    color: white;
+    height: 140px;
+    background: #282828;
+    color: #707070;
     text-shadow: 1px 1px 1px black;
     padding: 40px 0;
     text-align: center;
