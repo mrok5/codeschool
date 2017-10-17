@@ -1,5 +1,5 @@
 <?php
-require_once 'api\Unirest.php';
+require_once '../api/Unirest.php';
 
 $response = Unirest\Request::get("https://makevoid-skicams.p.mashape.com/cams.json",
   array(
