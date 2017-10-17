@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/roboto_regular_macroman/stylesheet.css">
@@ -124,11 +124,11 @@
             url: 'getData.php ',
             dataType: 'json ',
             success: function(data) {
-                console.log(data.body);
-                var camA1 = data.body[14].cams[57].url;
+                console.log(data.body[159].cams);
+                var camA1 = data.body[14].cams[59].url;
                 var camA2 = data.body[14].cams[57].url;
-                var camB1 = data.body[14].cams[57].url;
-                var camB2 = data.body[14].cams[57].url;
+                var camB1 = data.body[159].cams[479].url;
+                var camB2 = data.body[159].cams[483].url;
 
                 $(".leftBox").append("<img src=" + camA1 + " alt='cam A1 ' >");
                 $(".leftBox").append("<img src=" + camA2 + " alt='cam A2 ' >");
